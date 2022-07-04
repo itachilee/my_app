@@ -23,7 +23,7 @@ class InstaHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: topBar,
-        body: InstaBody(),
+        body: const InstaBody(),
         bottomNavigationBar: Container(
           color: Colors.white,
           height: 50.0,
