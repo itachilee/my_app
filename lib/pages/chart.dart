@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'nested_tabbar.dart';
 
 class Chart extends StatefulWidget {
-  Chart({Key? key}) : super(key: key);
+  const Chart({Key? key}) : super(key: key);
   @override
   State<Chart> createState() => _ChartState();
 }
@@ -74,7 +74,7 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
         controller: _tabController,
         children: [
           NestedTabbar(),
-          Center(
+          const Center(
             child: Text("It's rainy here"),
           ),
         ],

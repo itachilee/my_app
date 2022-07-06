@@ -4,7 +4,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class NestedTabbar extends StatefulWidget {
-  NestedTabbar({Key? key}) : super(key: key);
+  const NestedTabbar({Key? key}) : super(key: key);
 
   @override
   State<NestedTabbar> createState() => _NestedTabbarState();
@@ -15,6 +15,39 @@ class _NestedTabbarState extends State<NestedTabbar>
   late TabController _tabController;
   int touchedIndex = 0;
 
+  var a = ListTile(
+    leading: CircleAvatar(
+      backgroundColor: HexColor('#F3F3F3'),
+      child: Icon(Icons.home, color: HexColor('#54C395')),
+    ),
+    title: Text(
+      '早餐 80%',
+      style: TextStyle(
+        fontSize: 14,
+        color: HexColor('#666666'),
+      ),
+    ),
+    subtitle: SizedBox(
+      height: 6,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: const LinearProgressIndicator(
+          backgroundColor: Color(0xffcccccc),
+          valueColor: AlwaysStoppedAnimation(
+            Color(0xff54C395),
+          ),
+          value: 0.8,
+        ),
+      ),
+    ),
+    trailing: Text(
+      '-10￥',
+      style: TextStyle(
+        fontSize: 14,
+        color: HexColor('#666666'),
+      ),
+    ),
+  );
   @override
   void initState() {
     super.initState();
@@ -32,12 +65,12 @@ class _NestedTabbarState extends State<NestedTabbar>
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(vertical: 15),
+          margin: const EdgeInsets.symmetric(vertical: 15),
           child: TabBar(
             isScrollable: true,
             padding: EdgeInsets.zero,
-            indicatorPadding: EdgeInsets.only(bottom: 2),
-            labelPadding: EdgeInsets.symmetric(horizontal: 5),
+            indicatorPadding: const EdgeInsets.only(bottom: 2),
+            labelPadding: const EdgeInsets.symmetric(horizontal: 5),
             indicator: BoxDecoration(
               color: HexColor('#54C395'),
               borderRadius: BorderRadius.circular(45),
@@ -57,7 +90,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                   borderRadius: BorderRadius.circular(45),
                   border: Border.all(width: 1, color: HexColor('#A1A2A9')),
                 ),
-                child: Text('周'),
+                child: const Text('周'),
               ),
               Container(
                 width: 90,
@@ -67,7 +100,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                   borderRadius: BorderRadius.circular(45),
                   border: Border.all(width: 1, color: HexColor('#A1A2A9')),
                 ),
-                child: Text('月'),
+                child: const Text('月'),
               ),
               Container(
                 width: 90,
@@ -77,7 +110,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                   borderRadius: BorderRadius.circular(45),
                   border: Border.all(width: 1, color: HexColor('#A1A2A9')),
                 ),
-                child: Text('年'),
+                child: const Text('年'),
               ),
             ],
           ),
@@ -96,7 +129,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -104,7 +137,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -112,7 +145,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -120,7 +153,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -128,7 +161,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -136,7 +169,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -144,7 +177,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 10),
+                          margin: const EdgeInsets.symmetric(horizontal: 10),
                           child: Text(
                             '05.2022',
                             style: TextStyle(
@@ -156,12 +189,12 @@ class _NestedTabbarState extends State<NestedTabbar>
                       ],
                     ),
                   ),
-                  Divider(),
+                  const Divider(),
                   Expanded(
                     child: ListView(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 50),
+                          margin: const EdgeInsets.symmetric(horizontal: 50),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -246,150 +279,17 @@ class _NestedTabbarState extends State<NestedTabbar>
                         Column(
                           children: [
                             Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 10),
                               alignment: Alignment.centerLeft,
-                              child: Text(
+                              child: const Text(
                                 '支出排行榜',
                                 style: TextStyle(fontSize: 12),
                               ),
                             ),
-                            Divider(),
-                            ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: HexColor('#F3F3F3'),
-                                child: Icon(Icons.home,
-                                    color: HexColor('#54C395')),
-                              ),
-                              title: Text(
-                                '早餐 80%',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                              subtitle: SizedBox(
-                                height: 6,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: LinearProgressIndicator(
-                                    backgroundColor: Color(0xffcccccc),
-                                    valueColor: AlwaysStoppedAnimation(
-                                      Color(0xff54C395),
-                                    ),
-                                    value: 0.8,
-                                  ),
-                                ),
-                              ),
-                              trailing: Text(
-                                '-10￥',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                            ),
-                            ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: HexColor('#F3F3F3'),
-                                child: Icon(Icons.home,
-                                    color: HexColor('#54C395')),
-                              ),
-                              title: Text(
-                                '早餐 80%',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                              subtitle: SizedBox(
-                                height: 6,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: LinearProgressIndicator(
-                                    backgroundColor: Color(0xffcccccc),
-                                    valueColor: AlwaysStoppedAnimation(
-                                      Color(0xff54C395),
-                                    ),
-                                    value: 0.8,
-                                  ),
-                                ),
-                              ),
-                              trailing: Text(
-                                '-10￥',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                            ),
-                            ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: HexColor('#F3F3F3'),
-                                child: Icon(Icons.home,
-                                    color: HexColor('#54C395')),
-                              ),
-                              title: Text(
-                                '早餐 80%',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                              subtitle: SizedBox(
-                                height: 6,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: LinearProgressIndicator(
-                                    backgroundColor: Color(0xffcccccc),
-                                    valueColor: AlwaysStoppedAnimation(
-                                      Color(0xff54C395),
-                                    ),
-                                    value: 0.8,
-                                  ),
-                                ),
-                              ),
-                              trailing: Text(
-                                '-10￥',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                            ),
-                            ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: HexColor('#F3F3F3'),
-                                child: Icon(Icons.home,
-                                    color: HexColor('#54C395')),
-                              ),
-                              title: Text(
-                                '早餐 80%',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                              subtitle: SizedBox(
-                                height: 6,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: LinearProgressIndicator(
-                                    backgroundColor: Color(0xffcccccc),
-                                    valueColor: AlwaysStoppedAnimation(
-                                      Color(0xff54C395),
-                                    ),
-                                    value: 0.8,
-                                  ),
-                                ),
-                              ),
-                              trailing: Text(
-                                '-10￥',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: HexColor('#666666'),
-                                ),
-                              ),
-                            ),
+                            const Divider(),
+                            a,
+                            a
                           ],
                         ),
                       ],
@@ -397,10 +297,10 @@ class _NestedTabbarState extends State<NestedTabbar>
                   ),
                 ],
               ),
-              Center(
+              const Center(
                 child: Text("2"),
               ),
-              Center(
+              const Center(
                 child: Text("3"),
               ),
             ],

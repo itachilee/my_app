@@ -8,7 +8,7 @@ import 'package:lime/pages/record.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -18,11 +18,11 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
 
   List navigationBarItem = [
-    Dtail(),
+    const Dtail(),
     Chart(),
     Record(),
     Book(),
-    Individual(),
+    const Individual(),
   ];
 
   @override

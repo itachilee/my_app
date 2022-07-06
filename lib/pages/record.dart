@@ -163,75 +163,13 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                      const Divider(height: 10),
                     ],
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text('账户'),
                     Text('现金'),
                   ],
@@ -240,17 +178,17 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text('上传图片'),
                       ],
                     ),
-                    Text('图片'),
+                    const Text('图片'),
                   ],
                 ),
               ],
             ),
           ),
-          Center(
+          const Center(
             child: Text('2'),
           ),
         ],
