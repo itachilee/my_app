@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Record extends StatefulWidget {
-  Record({Key? key}) : super(key: key);
+  const Record({Key? key}) : super(key: key);
 
   @override
   State<Record> createState() => _RecordState();
@@ -38,10 +38,10 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
         foregroundColor: HexColor('#000000'),
         elevation: 1,
         leading: Container(
-          margin: EdgeInsets.only(left: 16),
+          margin: const EdgeInsets.only(left: 16),
           child: Row(
             // mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text('日常账本'),
               Icon(Icons.expand_more),
             ],
@@ -77,9 +77,9 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
               Navigator.pop(context);
             }),
             child: Container(
-              margin: EdgeInsets.only(right: 16),
+              margin: const EdgeInsets.only(right: 16),
               alignment: Alignment.center,
-              child: Text('取消'),
+              child: const Text('取消'),
             ),
           ),
         ],
@@ -88,14 +88,14 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
         controller: _tabController,
         children: [
           Container(
-            margin: EdgeInsets.only(
+            margin: const EdgeInsets.only(
               left: 35,
               right: 35,
             ),
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     top: 20,
                     bottom: 40,
                   ),
@@ -104,62 +104,46 @@ class _RecordState extends State<Record> with TickerProviderStateMixin {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: HexColor('#F3F3F3'),
+                                child: Icon(Icons.home,
+                                    color: HexColor('#54C395')),
+                              ),
+                              const Text('早餐')
+                            ],
                           ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: HexColor('#F3F3F3'),
+                                child: Icon(Icons.home,
+                                    color: HexColor('#54C395')),
+                              ),
+                              const Text('早餐')
+                            ],
                           ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: HexColor('#F3F3F3'),
+                                child: Icon(Icons.home,
+                                    color: HexColor('#54C395')),
+                              ),
+                              const Text('早餐')
+                            ],
                           ),
-                          Container(
-                            width: 44,
-                            height: 66,
-                            child: Column(
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: HexColor('#F3F3F3'),
-                                  child: Icon(Icons.home,
-                                      color: HexColor('#54C395')),
-                                ),
-                                Text('早餐')
-                              ],
-                            ),
+                          Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: HexColor('#F3F3F3'),
+                                child: Icon(Icons.home,
+                                    color: HexColor('#54C395')),
+                              ),
+                              const Text('早餐')
+                            ],
                           ),
                         ],
                       ),

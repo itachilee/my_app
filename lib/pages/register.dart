@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lime/common/status_bar_color.dart';
 
 class Register extends StatefulWidget {
-  Register({Key? key}) : super(key: key);
+  const Register({Key? key}) : super(key: key);
 
   @override
   State<Register> createState() => _RegisterState();
@@ -30,12 +30,11 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: _appBarWidget(),
-        body: Container(
-          child: Row(children: [
-            Text('用户名'),
-            Text('密码'),
-          ]),
-        ));
+      appBar: _appBarWidget(),
+      body: Row(children: const [
+        Text('用户名'),
+        Text('密码'),
+      ]),
+    );
   }
 }

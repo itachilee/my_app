@@ -72,9 +72,9 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [
+        children: const [
           NestedTabbar(),
-          const Center(
+          Center(
             child: Text("It's rainy here"),
           ),
         ],

@@ -19,9 +19,9 @@ class _HomeState extends State<Home> {
 
   List navigationBarItem = [
     const Dtail(),
-    Chart(),
-    Record(),
-    Book(),
+    const Chart(),
+    const Record(),
+    const Book(),
     const Individual(),
   ];
 
@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
         currentIndex: _currentIndex,
         fixedColor: HexColor('#54C395'),
         type: BottomNavigationBarType.fixed,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.article),
             label: '明细',
@@ -77,9 +77,9 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         elevation: 0,
         onPressed: () => {Navigator.of(context).push(_createRoute())},
-        child: Icon(Icons.add),
         splashColor: Colors.white,
         backgroundColor: HexColor('#54C395'),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
 
   Route _createRoute() {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => Record(),
+      pageBuilder: (context, animation, secondaryAnimation) => const Record(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0, 1);
         const end = Offset.zero;

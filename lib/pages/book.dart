@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/services.dart';
-import 'package:lime/main.dart';
 
 class Book extends StatefulWidget {
-  Book({Key? key}) : super(key: key);
+  const Book({Key? key}) : super(key: key);
 
   @override
   State<Book> createState() => _BookState();
@@ -24,9 +23,9 @@ class _BookState extends State<Book> with TickerProviderStateMixin {
         backgroundColor: HexColor('#fafafa'),
         foregroundColor: HexColor('#000000'),
         elevation: 1,
-        title: Text('账本'),
+        title: const Text('账本'),
         centerTitle: true,
-        actions: [Text('导出账本')],
+        actions: const [Text('导出账本')],
       ),
       body: Column(
         children: [
@@ -40,14 +39,14 @@ class _BookState extends State<Book> with TickerProviderStateMixin {
                   color: Colors.red,
                 ),
                 Column(
-                  children: [
+                  children: const [
                     Text('日常账本'),
                     Text('简介'),
                   ],
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('使用中'),
+                  child: const Text('使用中'),
                 ),
               ],
             ),
@@ -62,14 +61,14 @@ class _BookState extends State<Book> with TickerProviderStateMixin {
                   color: Colors.red,
                 ),
                 Column(
-                  children: [
+                  children: const [
                     Text('日常账本'),
                     Text('简介'),
                   ],
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('使用中'),
+                  child: const Text('使用中'),
                 ),
               ],
             ),

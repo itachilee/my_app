@@ -122,8 +122,10 @@ class _WelcomePageState extends State<WelcomePage> {
                             }
                           } else {
                             // 引导页第三页按钮跳转到主页
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (_) => Home()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const Home()));
                           }
                         },
                       ),

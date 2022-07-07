@@ -208,7 +208,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                                       fontSize: 11,
                                     ),
                                   ),
-                                  SizedBox(height: 5),
+                                  const SizedBox(height: 5),
                                   Text(
                                     '平均支出(天)：3000.09',
                                     style: TextStyle(
@@ -228,7 +228,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                                       fontSize: 11,
                                     ),
                                   ),
-                                  SizedBox(height: 5),
+                                  const SizedBox(height: 5),
                                   Text(
                                     '结余：3000.09',
                                     style: TextStyle(
@@ -245,7 +245,7 @@ class _NestedTabbarState extends State<NestedTabbar>
                           aspectRatio: 1.3,
                           child: Card(
                             elevation: 0,
-                            color: Color(0xfffafafa),
+                            color: const Color(0xfffafafa),
                             child: AspectRatio(
                               aspectRatio: 1,
                               child: PieChart(

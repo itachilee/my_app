@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lime/config/route_names.dart';
+import 'package:lime/pages/welcome_page.dart';
 import 'package:lime/route/routes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -7,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// 启动入口
 void main() async {
   // flutter 屏幕适配方案
-  await ScreenUtil.ensureScreenSize();
+  // await ScreenUtil.ensureScreenSize();
 
   // 首次启动加载引导页
   final prefs = await SharedPreferences.getInstance();
@@ -30,9 +31,10 @@ class Main extends StatelessWidget {
           ? welcomeRouteName
           : homeRouteName,
       // 路由列表
-      onGenerateRoute: onGenerateRoute,
+      // onGenerateRoute: onGenerateRoute,
       // 关闭 debug banner
       debugShowCheckedModeBanner: true,
+      home: const WelcomePage(),
     );
   }
 }
